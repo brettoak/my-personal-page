@@ -32,7 +32,7 @@ export default function Hero() {
             </p>
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <button className="btn-pink px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+              <button className="cursor-pointer btn-pink px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
                 Download CV
               </button>
               <button
@@ -41,7 +41,7 @@ export default function Hero() {
                   emailCopied
                     ? 'bg-green-600 hover:bg-green-700'
                     : 'bg-gray-800 hover:bg-gray-700'
-                } border border-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors`}
+                } border cursor-pointer border-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors`}
               >
                 {emailCopied ? 'Copied!' : 'Copy email'}
               </button>
