@@ -1,2 +1,2 @@
-# my-personnel-page
+# my-personal-page
 
