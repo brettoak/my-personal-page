@@ -23,6 +23,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full"></div>
+          Brett Han
         </div>
         <div className="hidden md:flex items-center gap-6">
           <a href="#home" className="nav-link">HOME</a>
