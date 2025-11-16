@@ -20,7 +20,7 @@ export default function Features() {
       ),
       title: 'API Design & Integration',
       description:
-        'Designing RESTful APIs and API Gateways (Nginx + Lua), standardizing interfaces with Swagger, and integrating third-party services like Stripe and WeChat Pay.',
+        'Designing RESTful APIs and API Gateways, standardizing interfaces with Swagger, and integrating third-party services like Stripe and WeChat Pay.',
     },
     {
       icon: (
@@ -40,7 +40,7 @@ export default function Features() {
       ),
       title: 'DevOps & Cloud',
       description:
-        'Deploying containerized applications on AWS and Alibaba Cloud with Docker and Jenkins CI/CD pipelines; automating builds and ensuring production stability.',
+        'Deploying containerized applications on Azure and AWS with Docker and Github Actions CI/CD pipelines; automating builds and ensuring production stability.',
     },
     {
       icon: (
