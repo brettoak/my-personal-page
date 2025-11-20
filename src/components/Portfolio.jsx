@@ -3,6 +3,7 @@ import AnimatedCard from './AnimatedCard'
 export default function Portfolio() {
   const projects = [
     {
+      link: 'https://laravel.dongyuhan.com',
       gradient: 'from-purple-600 to-pink-600',
       icon: (
         <svg className="w-16 h-16 text-white/70" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -121,7 +122,7 @@ export default function Portfolio() {
                     {project.status}
                   </span>
                   {project.showDetails && (
-                    <a href="#" className="text-pink hover:underline text-sm">
+                    <a href={project.link} target="_blank" className="text-pink hover:underline text-sm">
                       View Details →
                     </a>
                   )}
