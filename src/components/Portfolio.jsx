@@ -11,9 +11,9 @@ export default function Portfolio() {
         </svg>
       ),
       category: 'Full-Stack Development',
-      title: 'Task Management System',
+      title: 'Modular Tech Dashboard',
       description:
-        'A modern task management web app built with Laravel + React, featuring real-time collaboration and analytics dashboard.',
+        'A modular Laravel + Livewire dashboard featuring async task workflows, large-scale data tools, and AI-driven features.',
       status: 'In Progress',
       showDetails: true,
     },
