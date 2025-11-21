@@ -13,7 +13,7 @@ export default function Portfolio() {
       category: 'Full-Stack Development',
       title: 'Modular Tech Dashboard',
       description:
-        'A modular Laravel + Livewire dashboard featuring async task workflows, large-scale data tools, and AI-driven features.',
+        'A modular Laravel + Livewire dashboard featuring async task processing workflows, AI-driven modules, Role & Permission Management (RBAC) system, and additional features that will be continuously added over time.',
       status: 'In Progress',
       showDetails: true,
     },
