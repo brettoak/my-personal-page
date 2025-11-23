@@ -1,9 +1,11 @@
 import AnimatedCard from './AnimatedCard'
+import number1 from "../assets/number1.png";
 
 export default function Portfolio() {
   const projects = [
     {
       link: 'https://laravel.dongyuhan.com',
+      image: number1,
       gradient: 'from-purple-600 to-pink-600',
       icon: (
         <svg className="w-16 h-16 text-white/70" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -103,32 +105,37 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <AnimatedCard key={index}>
               <div className="project-card rounded-xl overflow-hidden bg-gray-900/50 border border-gray-800 hover:border-pink transition">
-              <div
-                className={`project-image relative flex items-center justify-center h-56 rounded bg-gradient-to-br ${project.gradient}`}
-              >
-                {project.icon}
-              </div>
-              <div className="p-6">
-                <p className="text-pink text-xs mb-2 uppercase tracking-wider">{project.category}</p>
-                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-light text-sm leading-relaxed mb-4">{project.description}</p>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-gray-400 text-sm flex items-center gap-2">
-                    {project.showDetails && (
-                      <svg className="w-4 h-4 text-pink" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.5 3A1.5 1.5 0 001 4.5v11A1.5 1.5 0 002.5 17h15a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0017.5 3h-15zM2 5h16v10H2V5z" />
-                      </svg>
-                    )}
-                    {project.status}
-                  </span>
-                  {project.showDetails && (
-                    <a href={project.link} target="_blank" className="text-pink hover:underline text-sm">
-                      View Details →
-                    </a>
+                <div
+                  className={`project-image relative flex items-center justify-center h-56 rounded bg-gradient-to-br`}
+                >
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  ) : (
+                    project.icon
                   )}
+
+                </div>
+                <div className="p-6">
+                  <p className="text-pink text-xs mb-2 uppercase tracking-wider">{project.category}</p>
+                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+                  <p className="text-gray-light text-sm leading-relaxed mb-4">{project.description}</p>
+                  <div className="flex items-center justify-between mt-4">
+                    <span className="text-gray-400 text-sm flex items-center gap-2">
+                      {project.showDetails && (
+                        <svg className="w-4 h-4 text-pink" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2.5 3A1.5 1.5 0 001 4.5v11A1.5 1.5 0 002.5 17h15a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0017.5 3h-15zM2 5h16v10H2V5z" />
+                        </svg>
+                      )}
+                      {project.status}
+                    </span>
+                    {project.showDetails && (
+                      <a href={project.link} target="_blank" className="text-pink hover:underline text-sm">
+                        View Details →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
             </AnimatedCard>
           ))}
         </div>
