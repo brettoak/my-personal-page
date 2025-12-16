@@ -94,7 +94,7 @@ export default function Portfolio() {
   ]
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-black bg-opacity-30">
+    <section id="portfolio" className="py-20 px-6 section-generic">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="section-title-small mb-2">EXPLORE MY PROJECTS</p>
@@ -104,7 +104,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <AnimatedCard key={index}>
-              <div className="project-card rounded-xl overflow-hidden bg-gray-900/50 border border-gray-800 hover:border-pink transition">
+              <div className="project-card rounded-xl overflow-hidden transition">
                 <div
                   className={`project-image relative flex items-center justify-center h-56 rounded bg-gradient-to-br`}
                 >
