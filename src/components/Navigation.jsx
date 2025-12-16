@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   useEffect(() => {
@@ -30,6 +31,9 @@ export default function Navigation() {
           <a href="#features" className="nav-link">FEATURES</a>
           <a href="#portfolio" className="nav-link">PORTFOLIO</a>
           <a href="#contact" className="nav-link">CONTACTS</a>
+          <div className="pl-4 border-l border-gray-200 dark:border-gray-700">
+             <ThemeToggle />
+          </div>
         </div>
       </div>
     </nav>
