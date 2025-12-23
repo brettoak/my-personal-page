@@ -1,5 +1,6 @@
 import AnimatedCard from './AnimatedCard'
 import number1 from "../assets/number1.png";
+import number2 from "../assets/number2.png";
 
 export default function Portfolio() {
   const projects = [
@@ -20,6 +21,8 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
+      link: 'https://teacher.dongyuhan.com',
+      image: number2,
       gradient: 'from-blue-600 to-cyan-500',
       icon: (
         <svg className="w-16 h-16 text-white/60" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -27,11 +30,11 @@ export default function Portfolio() {
           <path d="M12 7v5l3 3" />
         </svg>
       ),
-      category: 'Coming Soon',
-      title: 'Next Project',
-      description: 'Something exciting is on the way — stay tuned for the next release.',
-      status: '⏳ Coming soon',
-      showDetails: false,
+      category: 'nestJS and nextJS',
+      title: 'onlineteacher',
+      description: 'A full-stack online video course platform built with NestJS and Next.js, designed for scalability, security, and modern cloud deployment. The application supports user authentication, course management, secure video streaming, and online payments.',
+      status: 'In Progress',
+      showDetails: true,
     },
     {
       gradient: 'from-green-500 to-emerald-600',
