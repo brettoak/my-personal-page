@@ -1,6 +1,7 @@
 import AnimatedCard from './AnimatedCard'
 import number1 from "../assets/number1.png";
 import number2 from "../assets/number2.png";
+import number3 from "../assets/number3.png";
 
 export default function Portfolio() {
   const projects = [
@@ -37,6 +38,8 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
+      link: 'https://github.com/brettoak/EnListeningTrainer/releases',
+      image: number3,
       gradient: 'from-green-500 to-emerald-600',
       icon: (
         <svg className="w-16 h-16 text-white/65" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -45,11 +48,11 @@ export default function Portfolio() {
           <polyline points="2 12 12 17 22 12" />
         </svg>
       ),
-      category: 'Coming Soon',
-      title: 'Next Project',
-      description: 'Another web application currently in concept phase. Details coming soon.',
-      status: '⏳ Coming soon',
-      showDetails: false,
+      category: 'Electron App',
+      title: 'English Listening Trainer',
+      description: 'A powerful, standalone desktop application designed to help you improve your English listening skills through focused practice. Built with Electron, React, and TypeScript. Features include Advanced Media Player, Integrated Note Taking, Customization.',
+      status: 'In Progress',
+      showDetails: true,
     },
     {
       gradient: 'from-orange-500 to-red-600',
