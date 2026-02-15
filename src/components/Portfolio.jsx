@@ -2,6 +2,7 @@ import AnimatedCard from './AnimatedCard'
 import number1 from "../assets/number1.png";
 import number2 from "../assets/number2.png";
 import number3 from "../assets/number3.png";
+import number4 from "../assets/number4.png";
 
 export default function Portfolio() {
   const projects = [
@@ -55,6 +56,8 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
+      link: 'https://springboot.dongyuhan.com',
+      image: number4,
       gradient: 'from-orange-500 to-red-600',
       icon: (
         <svg className="w-16 h-16 text-white/65" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -63,11 +66,11 @@ export default function Portfolio() {
           <line x1="9" y1="21" x2="9" y2="9" />
         </svg>
       ),
-      category: 'Coming Soon',
-      title: 'Next Project',
-      description: 'A future portfolio addition focused on performance and clean UI.',
-      status: '⏳ Coming soon',
-      showDetails: false,
+      category: 'Spring Boot',
+      title: 'Microservice MyPassport',
+      description: 'A comprehensive User Center interface designed to provide robust authentication and user management capabilities. Built with modern Java technologies, it offers a secure and scalable foundation for managing user identities.',
+      status: 'In Progress',
+      showDetails: true,
     },
     {
       gradient: 'from-indigo-500 to-purple-600',
