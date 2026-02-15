@@ -56,7 +56,7 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
-      link: 'https://springboot.dongyuhan.com',
+      link: 'https://passport.dongyuhan.com',
       image: number4,
       gradient: 'from-orange-500 to-red-600',
       icon: (
