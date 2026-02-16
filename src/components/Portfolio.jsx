@@ -33,7 +33,7 @@ export default function Portfolio() {
         </svg>
       ),
       category: 'nestJS and nextJS',
-      title: 'onlineteacher',
+      title: 'Onlineteacher',
       description: 'A full-stack online video course platform built with NestJS and Next.js, designed for scalability, security, and modern cloud deployment. The application supports user authentication, course management, secure video streaming, and online payments.',
       status: 'In Progress',
       showDetails: true,
