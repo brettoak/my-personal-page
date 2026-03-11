@@ -74,13 +74,11 @@ export default function Features() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
-            <AnimatedCard key={index}>
-              <div className="skill-card p-8">
-                <div className="skill-icon text-pink">{skill.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{skill.title}</h3>
-                <p className="text-gray-light leading-relaxed">{skill.description}</p>
-              </div>
-            </AnimatedCard>
+            <div className="skill-card p-8">
+              <div className="skill-icon text-pink">{skill.icon}</div>
+              <h3 className="text-xl font-bold mb-3">{skill.title}</h3>
+              <p className="text-gray-light leading-relaxed">{skill.description}</p>
+            </div>
           ))}
         </div>
       </div>
