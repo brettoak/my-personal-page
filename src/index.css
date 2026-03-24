@@ -14,8 +14,9 @@
   --card-border: rgba(255, 255, 255, 0.1);
   --card-hover-bg: rgba(255, 255, 255, 0.08);
   
-  --accent-pink: #ec4899;
-  --accent-pink-hover: #db2777;
+  --accent: #ec4899;
+  --accent-hover: #db2777;
+  --accent-rgb: 236, 72, 153;
   
   --hero-gradient-1: rgba(255, 255, 255, 0.03);
   --hero-gradient-2: rgba(255, 255, 255, 0.015);
@@ -39,8 +40,9 @@
   --card-border: rgba(0, 0, 0, 0.1);
   --card-hover-bg: #f1f5f9;
   
-  --accent-pink: #d946ef;
-  --accent-pink-hover: #c026d3;
+  --accent: #d946ef;
+  --accent-hover: #c026d3;
+  --accent-rgb: 217, 70, 239;
   
   --hero-gradient-1: rgba(0, 0, 0, 0.03);
   --hero-gradient-2: rgba(0, 0, 0, 0.015);
@@ -106,23 +108,23 @@ body::before {
 }
 
 .nav-link:hover {
-  color: var(--accent-pink);
+  color: var(--accent);
 }
 
-.btn-pink {
-  background: var(--accent-pink);
+.btn-accent {
+  background: var(--accent);
   color: white;
   transition: all 0.3s;
 }
 
-.btn-pink:hover {
-  background: var(--accent-pink-hover);
+.btn-accent:hover {
+  background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.4);
 }
 
-.text-pink {
-  color: var(--accent-pink);
+.text-accent {
+  color: var(--accent);
 }
 
 .text-gray-light {
@@ -160,15 +162,15 @@ body::before {
 
 .skill-card:hover {
   background: var(--card-hover-bg);
-  border-color: rgba(236, 72, 153, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.2);
 }
 
 .skill-icon {
   width: 60px;
   height: 60px;
-  background: rgba(236, 72, 153, 0.2);
+  background: rgba(var(--accent-rgb), 0.2);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -187,7 +189,7 @@ body::before {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(236, 72, 153, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
 }
 
 .project-image {
@@ -212,7 +214,7 @@ body::before {
 
 .contact-item:hover {
   background: var(--card-hover-bg);
-  border-color: rgba(236, 72, 153, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   transform: translateY(-3px);
 }
 
@@ -230,7 +232,7 @@ body::before {
 }
 
 .social-icon:hover {
-  background: var(--accent-pink);
+  background: var(--accent);
   color: white;
   transform: scale(1.1);
 }
@@ -239,7 +241,7 @@ body::before {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-pink);
+  color: var(--accent);
 }
 
 .section-title-large {

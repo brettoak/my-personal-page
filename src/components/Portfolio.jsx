@@ -134,20 +134,20 @@ export default function Portfolio() {
                   )}
                 </div>
                 <div className="p-6">
-                  <p className="text-pink text-xs mb-2 uppercase tracking-wider">{project.category}</p>
+                  <p className="text-accent text-xs mb-2 uppercase tracking-wider">{project.category}</p>
                   <h3 className="text-xl font-bold mb-3">{project.title}</h3>
                   <p className="text-gray-light text-sm leading-relaxed mb-4">{project.description}</p>
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-gray-400 text-sm flex items-center gap-2">
                       {project.showDetails && (
-                        <svg className="w-4 h-4 text-pink" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.5 3A1.5 1.5 0 001 4.5v11A1.5 1.5 0 002.5 17h15a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0017.5 3h-15zM2 5h16v10H2V5z" />
                         </svg>
                       )}
                       {project.status}
                     </span>
                     {project.showDetails && (
-                      <span className="text-pink group-hover:underline text-sm font-medium">
+                      <span className="text-accent group-hover:underline text-sm font-medium">
                         View Details →
                       </span>
                     )}
