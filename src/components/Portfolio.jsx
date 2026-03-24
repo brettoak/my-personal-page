@@ -114,7 +114,7 @@ export default function Portfolio() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div className="project-card rounded-xl overflow-hidden transition">
+            <AnimatedCard key={index} className="project-card rounded-xl overflow-hidden transition">
               <div
                 className={`project-image relative flex items-center justify-center h-56 rounded bg-gradient-to-br`}
               >
@@ -145,7 +145,7 @@ export default function Portfolio() {
                   )}
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </div>

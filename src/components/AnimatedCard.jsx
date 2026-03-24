@@ -8,7 +8,7 @@ export default function AnimatedCard({ children, className = '' }) {
     if (!card) return
 
     const observerOptions = {
-      threshold: 0,
+      threshold: 0.1,
       rootMargin: '0px 0px -50px 0px',
     }
 
@@ -21,9 +21,10 @@ export default function AnimatedCard({ children, className = '' }) {
       })
     }, observerOptions)
 
-    card.style.opacity = '1'
-    card.style.transform = 'translateY(0px)'
-    card.style.transition = 'opacity 0s ease, transform 0s ease'
+    // Initial state
+    card.style.opacity = '0'
+    card.style.transform = 'translateY(50px)'
+    card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'
     observer.observe(card)
 
     return () => {
