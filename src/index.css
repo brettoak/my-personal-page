@@ -22,6 +22,7 @@
   --hero-overlay: rgba(40, 40, 40, 0.3);
   
   --section-overlay: rgba(0, 0, 0, 0.3);
+  --grid-color: rgba(255, 255, 255, 0.05);
 }
 
 .light-mode {
@@ -47,6 +48,7 @@
   --hero-overlay: rgba(200, 200, 200, 0.1);
   
   --section-overlay: rgba(255, 255, 255, 0.5);
+  --grid-color: rgba(0, 0, 0, 0.035);
 }
 
 @keyframes fadeIn {
@@ -82,8 +84,8 @@ body::before {
   pointer-events: none;
   /* Single layer modern grid */
   background-image: 
-    linear-gradient(to right, var(--card-border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--card-border) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
   /* Smooth fade-out at the bottom and edges */
   mask-image: radial-gradient(ellipse at center top, black 30%, transparent 80%);
