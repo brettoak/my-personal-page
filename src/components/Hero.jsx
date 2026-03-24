@@ -26,15 +26,20 @@ export default function Hero() {
             <p className="text-xl md:text-2xl text-gray-light mb-2">Ship reliable software.</p>
             <p className="text-xl md:text-2xl text-gray-light mb-8">Explain it clearly.</p>
             <p className="text-base md:text-lg text-gray-light mb-8 leading-relaxed">
-              Hi, I'm <span className="text-pink">Brett Han</span> — a Melbourne-based Full-Stack Developer
+              Hi, I'm <a href="https://www.linkedin.com/in/brett-han-melbourne" target="_blank" rel="noopener noreferrer" className="text-pink cursor-pointer hover:underline">Brett Han</a> — a Melbourne-based Full-Stack Developer
               passionate about clean architecture and thoughtful design. I create scalable, maintainable web
               systems with clear documentation and considerate user experience.
             </p>
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <button className="cursor-pointer btn-pink px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                Download CV
-              </button>
+              <a 
+                href="https://www.linkedin.com/in/brett-han-melbourne"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer btn-pink px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center"
+              >
+                View LinkedIn
+              </a>
               <button
                 onClick={handleCopyEmail}
                 className={`${
