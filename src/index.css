@@ -67,18 +67,28 @@
 body {
   margin: 0;
   background: var(--bg-primary);
-  /* Updated to use variables for gradients */
-  background-image: linear-gradient(var(--hero-gradient-1) 1px, transparent 1px),
-    linear-gradient(90deg, var(--hero-gradient-1) 1px, transparent 1px),
-    linear-gradient(var(--hero-gradient-2) 1px, transparent 1px),
-    linear-gradient(90deg, var(--hero-gradient-2) 1px, transparent 1px),
-    linear-gradient(135deg, var(--hero-overlay) 0%, transparent 50%, var(--hero-overlay) 100%);
-  background-size: 50px 50px, 50px 50px, 200px 200px, 200px 200px, 100% 100%;
-  background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   min-height: 100vh;
   transition: background-color 0.1s, color 0.1s;
+}
+
+/* Hardware-accelerated, performant background grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Single layer modern grid */
+  background-image: 
+    linear-gradient(to right, var(--card-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--card-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  /* Smooth fade-out at the bottom and edges */
+  mask-image: radial-gradient(ellipse at center top, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center top, black 30%, transparent 80%);
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .nav-bar {
@@ -127,22 +137,7 @@ body {
   position: relative;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(var(--hero-gradient-1) 1px, transparent 1px),
-    linear-gradient(90deg, var(--hero-gradient-1) 1px, transparent 1px),
-    linear-gradient(var(--hero-gradient-2) 1px, transparent 1px),
-    linear-gradient(90deg, var(--hero-gradient-2) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px, 150px 150px, 150px 150px;
-  background-position: 0 0, 0 0, 0 0, 0 0;
-  z-index: 0;
-  pointer-events: none;
-}
+/* Removed .hero-section::before background grid to prevent duplicate rendering and improve scroll performance */
 
 .hero-section > * {
   position: relative;
