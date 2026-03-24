@@ -3,6 +3,7 @@ import number1 from "../assets/number1.png";
 import number2 from "../assets/number2.png";
 import number3 from "../assets/number3.png";
 import number4 from "../assets/number4.png";
+import number5 from "../assets/number5.png";
 
 export default function Portfolio() {
   const projects = [
@@ -73,6 +74,7 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
+      image:number5,
       gradient: 'from-indigo-500 to-purple-600',
       icon: (
         <svg className="w-16 h-16 text-white/60" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -80,10 +82,10 @@ export default function Portfolio() {
           <path d="M12 9v6" />
         </svg>
       ),
-      category: 'Coming Soon',
-      title: 'Next Project',
-      description: 'Upcoming full-stack project integrating APIs, automation, and dashboard analytics.',
-      status: '⏳ Coming soon',
+      category: 'Golang and Vue',
+      title: 'SevWatch',
+      description: 'SvcWatch is a lightweight, self-hosted server monitoring dashboard that parses access logs to visualize key performance metrics, such as request latency, error rates, and status distributions, in a modern UI.',
+      status: 'In Progress',
       showDetails: false,
     },
     {
