@@ -1,6 +1,15 @@
+import { useState } from 'react'
 import AnimatedCard from './AnimatedCard'
 
 export default function Contact() {
+  const [showCopied, setShowCopied] = useState(false)
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('kanbrette@gmail.com')
+    setShowCopied(true)
+    setTimeout(() => setShowCopied(false), 2000)
+  }
+
   return (
     <section id="contact" className="contact-section py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -15,7 +24,21 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <AnimatedCard>
-            <div className="contact-item text-center">
+            <div 
+              className="contact-item text-center cursor-pointer relative group"
+              onClick={handleCopyEmail}
+            >
+              {/* Tooltip */}
+              <div className={`
+                absolute -top-14 left-1/2 -translate-x-1/2 
+                bg-slate-800 dark:bg-accent text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xl z-50
+                transition-all duration-300 pointer-events-none
+                ${showCopied ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-2'}
+              `}>
+                Email copied!
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-800 dark:bg-accent rotate-45"></div>
+              </div>
+
               <div className="skill-icon text-accent mx-auto mb-4">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
