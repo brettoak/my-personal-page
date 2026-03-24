@@ -159,7 +159,6 @@ body {
   border: 1px solid var(--card-border);
   border-radius: 16px;
   transition: all 0.3s;
-  backdrop-filter: blur(10px);
 }
 
 .skill-card:hover {
@@ -186,7 +185,6 @@ body {
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s;
-  backdrop-filter: blur(10px);
 }
 
 .project-card:hover {

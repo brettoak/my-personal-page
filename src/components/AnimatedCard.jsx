@@ -24,6 +24,7 @@ export default function AnimatedCard({ children, className = '' }) {
     // Initial state
     card.style.opacity = '0'
     card.style.transform = 'translateY(50px)'
+    card.style.willChange = 'opacity, transform'
     card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'
     observer.observe(card)
 

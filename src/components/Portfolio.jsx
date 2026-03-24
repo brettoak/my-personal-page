@@ -119,7 +119,7 @@ export default function Portfolio() {
                 className={`project-image relative flex items-center justify-center h-56 rounded bg-gradient-to-br`}
               >
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  <img src={project.image} alt={project.title} loading="lazy" className="w-full h-full object-cover" />
                 ) : (
                   project.icon
                 )}
