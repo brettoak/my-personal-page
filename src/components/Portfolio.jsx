@@ -74,7 +74,8 @@ export default function Portfolio() {
       showDetails: true,
     },
     {
-      image:number5,
+      link: 'https://watch.dongyuhan.com/',
+      image: number5,
       gradient: 'from-indigo-500 to-purple-600',
       icon: (
         <svg className="w-16 h-16 text-white/60" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -86,7 +87,7 @@ export default function Portfolio() {
       title: 'SevWatch',
       description: 'SvcWatch is a lightweight, self-hosted server monitoring dashboard that parses access logs to visualize key performance metrics, such as request latency, error rates, and status distributions, in a modern UI.',
       status: 'In Progress',
-      showDetails: false,
+      showDetails: true,
     },
     {
       gradient: 'from-yellow-500 to-orange-600',
